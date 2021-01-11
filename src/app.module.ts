@@ -12,12 +12,13 @@ import { BooksModule } from './books/books.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 3307,
+      port: 3306,
       username: 'root',
-      password: 'root',
-      database: 'test',
+      password: '123456',
+      database: 'tentant',
       entities: [ Tenant ],
       synchronize: true,
+      logging: true
     }),
     TenantModule,
     BooksModule,
